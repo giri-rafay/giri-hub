@@ -9,7 +9,7 @@ spec:
     version: 2.6.0
   customAddons:
   - name: nginx-catalog
-    version: v11
+    version: v12
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -24,4 +24,4 @@ spec:
   driftWebhook:
     enabled: true
   type: golden
-  version: v2
+  version: v3
