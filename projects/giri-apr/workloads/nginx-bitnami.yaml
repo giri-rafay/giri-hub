@@ -14,3 +14,6 @@ spec:
       timeout: 5m0s
     type: Helm
   namespace: nginx-bitnami
+  placement:
+    selector: rafay.dev/clusterName=giri-apr10
+  version: nginx-bitnami-v1-202404100252380000
