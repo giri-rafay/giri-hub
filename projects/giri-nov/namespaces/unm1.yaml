@@ -1,9 +1,0 @@
-apiVersion: infra.k8smgmt.io/v3
-kind: Namespace
-metadata:
-  labels:
-    kubernetes.io/metadata.name: unm1
-  name: unm1
-  project: giri-nov
-spec:
-  resourceQuotas: {}

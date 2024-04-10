@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: sample-app
+  project: giri-apr
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: sample-app-wizard
