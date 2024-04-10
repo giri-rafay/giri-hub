@@ -12,3 +12,4 @@ spec:
     type: Helm
   namespace: catalog-nginx
   sharing: {}
+  version: v2
