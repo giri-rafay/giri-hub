@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: gb1
+  project: giri-apr
+spec:
+  base:
+    name: default-aks
+    version: 2.6.0
+  customAddons:
+  - name: nginx-catalog
+    version: v11
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  type: golden
+  version: v1
