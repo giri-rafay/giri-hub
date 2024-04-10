@@ -16,4 +16,4 @@ spec:
   namespace: nginx-bitnami
   placement:
     selector: rafay.dev/clusterName=giri-apr10
-  version: nginx-bitnami-v1-202404100252380000
+  version: nginx-bitnami-v2-202404100316470000
