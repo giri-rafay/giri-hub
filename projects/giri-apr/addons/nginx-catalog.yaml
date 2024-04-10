@@ -10,8 +10,8 @@ spec:
     artifact:
       catalog: default-bitnami
       chartName: nginx
-      chartVersion: 16.0.2
+      chartVersion: 16.0.1
     type: Helm
   namespace: catalog-nginx
   sharing: {}
-  version: v11
+  version: v12
