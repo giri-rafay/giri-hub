@@ -5,4 +5,13 @@ metadata:
     rafay.dev/description: ""
   name: test-nikhil
   project: giri-apr
-spec: {}
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-apr10
+  resourceQuotas: {}
