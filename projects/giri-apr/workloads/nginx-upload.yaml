@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginx-upload
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/nginx-upload/nginx-15.4.2.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: nginx-workload
+  placement:
+    selector: rafay.dev/clusterName=giri-apr10
+  version: nginx-upload-v1-202404100148160000
