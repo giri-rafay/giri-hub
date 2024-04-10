@@ -5,3 +5,7 @@ metadata:
 spec:
   driftWebhook:
     enabled: true
+  syncExcludedNamespaces:
+  - asasa
+  - aa
+  - ab
