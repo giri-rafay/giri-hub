@@ -5,7 +5,7 @@ metadata:
     rafay.dev/description: testing
   description: testing
   labels:
-    app: sample
+    app: sample1
   name: git-sample-app-wizard
   project: giri-apr
 spec:
