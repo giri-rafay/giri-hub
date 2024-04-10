@@ -18,7 +18,10 @@ spec:
         customizationEnabled: true
       prometheusAdapter:
         customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
   driftWebhook:
     enabled: true
   type: golden
-  version: v1
+  version: v2
