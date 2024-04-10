@@ -7,4 +7,17 @@ metadata:
   name: ns-repo
   project: giri-apr
 spec:
-  artifact: {}
+  artifact:
+    path:
+      name: ns-repo.yaml
+    repository: giri-hub
+    revision: main
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-apr10
+  resourceQuotas: {}
