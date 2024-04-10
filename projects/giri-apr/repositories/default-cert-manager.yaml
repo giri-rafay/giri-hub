@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-cert-manager
+  project: giri-apr
+spec:
+  endpoint: https://github.com/jetstack/cert-manager.git
+  options: {}
+  type: Git
+status:
+  projects:
+  - projectId: 2w7pq4k
+    repositoryId: k3554vm
+  webhookConfig:
+    webhookSecret: 2b4d731e10f082f7e7d2b8ab1035d75515099eceeb134e01511b82ca78081a7d
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/k3554vm

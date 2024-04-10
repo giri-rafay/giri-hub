@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: rafay-nginx
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/rafay-nginx/nginx-15.4.2.tgz
+    type: Helm
+  namespace: rafay-nginx
+  sharing: {}
+  version: v1

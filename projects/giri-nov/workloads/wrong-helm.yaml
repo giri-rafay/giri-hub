@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wrong-helm
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/wrong-helm/nginx1-0.1.0.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: wrong-helm
+  placement:
+    selector: rafay.dev/clusterName=giri-mar11
+  version: wrong-helm-v3-202403111713510000

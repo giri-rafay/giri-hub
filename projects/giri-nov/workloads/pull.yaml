@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: pull
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: workloads/native_yaml/nginx_webserver/nginx-with-GSLB-annotation-production.yaml
+      repository: qa-automation-aplication
+      revision: master
+    type: Yaml
+  namespace: ng
+  placement:
+    selector: rafay.dev/clusterName=giri-mar4
+  version: pull-v1-202403041127180000

@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: testing
+  description: testing
+  labels:
+    app: sample
+  name: sample-app-wizard
+  project: giri-apr
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-apr10
+  resourceQuotas: {}

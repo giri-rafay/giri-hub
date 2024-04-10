@@ -1,0 +1,15 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: giri-hub
+  project: giri-apr
+spec:
+  active: true
+  cluster:
+    name: giri-apr10
+  sharing:
+    enabled: true
+    projects:
+    - name: giri-nov
+  type: Cluster
+  version: r2.6.0

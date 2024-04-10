@@ -1,0 +1,26 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-qc-feb
+  project: giri-nov
+spec:
+  agents:
+  - name: giri-mar1
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-qc-feb.git
+  options: {}
+  secret:
+    name: file://artifacts/giri-qc-feb/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: empv70m
+    name: giri-mar1
+  projects:
+  - projectId: kr993wk
+    repositoryId: 2887og2
+  webhookConfig:
+    webhookSecret: f3177d75edd5f028636319e9de831eb24a0e6e892b3c6017eadcaf220cd5c2de
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/2887og2

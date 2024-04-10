@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test11
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test11/test11.yaml
+    type: Yaml
+  namespace: a1
+  placement:
+    selector: app2=w2
+  version: test11-v1-202403140525480000

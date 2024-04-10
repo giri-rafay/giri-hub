@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-bitnami
+  project: giri-apr
+spec:
+  endpoint: https://charts.bitnami.com/bitnami
+  options: {}
+  type: Helm
+status:
+  projects:
+  - projectId: 2w7pq4k
+    repositoryId: 2wnn0e2
+  webhookConfig:
+    webhookSecret: d8dc00ffd6f24a8b86a2a7004af6b203e0103ce841904e9cd08375bf4ecb6034
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/2wnn0e2

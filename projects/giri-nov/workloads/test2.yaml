@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test2
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/test2/nginx-test-0.1.0.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ng
+  placement:
+    selector: rafay.dev/clusterName=giri-mar4
+  version: test2-v1-202403050948320000

@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: giri-custom-golden-blueprint
+  project: giri-nov
+spec:
+  base:
+    name: minimal
+    version: 2.5.0
+  customAddons:
+  - name: nginx1
+    version: v1
+  - name: wrong-addon
+    version: v1
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  type: golden
+  version: v2

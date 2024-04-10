@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nginx-deployment
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: nginx-deployment.yaml
+      repository: giri-hub
+      revision: main
+    type: Yaml
+  namespace: addon-nginx
+  sharing: {}
+  version: v1

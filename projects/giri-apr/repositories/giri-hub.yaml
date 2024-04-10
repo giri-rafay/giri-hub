@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-hub
+  project: giri-apr
+spec:
+  agents:
+  - name: giri-hub
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-hub.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/giri-hub/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: qkoqj6m
+    name: giri-hub
+  projects:
+  - projectId: 2w7pq4k
+    repositoryId: m166y62
+  webhookConfig:
+    webhookSecret: d93d66810c630790d63c037361fc179927c0e8d82182912adedc034981ac45db
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/m166y62

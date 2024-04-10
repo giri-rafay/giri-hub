@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: w2
+  project: giri-nov
+spec:
+  artifact:
+    artifact:
+      chartName: nginx
+      chartVersion: 15.14.0
+      repository: default-bitnami
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: mar26
+  placement:
+    selector: rafay.dev/clusterName=giri-qc-mar26
+  version: w2-v3-202403260807320000

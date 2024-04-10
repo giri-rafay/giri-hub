@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-stable-helm
+  project: giri-apr
+spec:
+  endpoint: https://charts.helm.sh/stable
+  options: {}
+  type: Helm
+status:
+  projects:
+  - projectId: 2w7pq4k
+    repositoryId: mp11wxm
+  webhookConfig:
+    webhookSecret: 9a15953beaaebfe28f77ba96fc88622502fcaa682ef784e555a5fd84df6c95a4
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/mp11wxm
