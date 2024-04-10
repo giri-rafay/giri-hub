@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Addon
 metadata:
+  labels:
+    app: nginx
   name: nginx-catalog
   project: giri-apr
 spec:
@@ -12,4 +14,4 @@ spec:
     type: Helm
   namespace: catalog-nginx
   sharing: {}
-  version: v4
+  version: v5
