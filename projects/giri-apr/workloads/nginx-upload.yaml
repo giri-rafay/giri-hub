@@ -15,4 +15,4 @@ spec:
   namespace: nginx-workload
   placement:
     selector: rafay.dev/clusterName=giri-apr10
-  version: nginx-upload-v1-202404100148160000
+  version: nginx-upload-v2-202404100159410000
