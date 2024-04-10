@@ -5,6 +5,11 @@ metadata:
   project: giri-apr
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/sample-app/sample-app.yaml
     type: Yaml
   namespace: sample-app-wizard
+  placement:
+    selector: rafay.dev/clusterName=giri-apr10
+  version: sample-app-v1-202404100042340000
