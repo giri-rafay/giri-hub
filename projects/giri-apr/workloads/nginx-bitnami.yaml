@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginx-bitnami
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx
+      chartVersion: 16.0.2
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: nginx-bitnami
