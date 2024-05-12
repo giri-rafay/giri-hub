@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: k8s-np1
+  project: giri-apr
+spec:
+  rules:
+  - name: k8s-rule1
+    version: v1
+  version: v1

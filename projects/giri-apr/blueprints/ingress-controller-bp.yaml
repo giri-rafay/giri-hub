@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: ingress-controller-bp
+  project: giri-apr
+spec:
+  base:
+    name: default-aks
+    version: 2.7.0
+  customAddons:
+  - name: nginx-ingress
+    version: version1
+  defaultAddons:
+    enableIngress: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: v4

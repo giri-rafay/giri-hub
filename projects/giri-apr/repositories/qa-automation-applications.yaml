@@ -1,0 +1,24 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: qa-automation-applications
+  project: giri-apr
+spec:
+  agents:
+  - {}
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/RafaySystems/qa-automation-applications.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/qa-automation-applications/sealed-secret.yaml
+  type: Git
+status:
+  projects:
+  - projectId: 2w7pq4k
+    repositoryId: mxnxjj2
+  webhookConfig:
+    webhookSecret: 7dc3220fac3b761c91e13ac45e7fa2e66ef187c024b68551153b307c24309947
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/mxnxjj2

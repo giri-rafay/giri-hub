@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: bitnami-ingress
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx-ingress-controller
+      chartVersion: 11.1.1
+    type: Helm
+  namespace: bitnami-nginx
+  sharing: {}
+  version: v1

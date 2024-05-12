@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nginx-ingress
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: ingress-nginx
+      chartVersion: 4.10.0
+    type: Helm
+  namespace: ingress-nginx1
+  sharing: {}
+  version: version1

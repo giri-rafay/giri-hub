@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: k8s-rule1
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/k8s-rule1/k8s-npol.yaml
+    options: {}
+    type: Yaml
+  version: v1

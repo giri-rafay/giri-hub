@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: cr1
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/cr1/k8s-npol.yaml
+    options: {}
+    type: Yaml
+  version: v1

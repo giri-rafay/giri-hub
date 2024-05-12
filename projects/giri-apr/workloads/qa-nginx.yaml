@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: qa-nginx
+  project: giri-apr
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: workloads/native_yaml/nginx_webserver/nginx-with-GSLB-annotation-stage.yaml
+      repository: qa-automation-applications
+      revision: master
+    type: Yaml
+  namespace: qa-nginx
+  placement:
+    selector: rafay.dev/clusterName=giri-qc-apr30
+  version: qa-nginx-v2-202404300521170000

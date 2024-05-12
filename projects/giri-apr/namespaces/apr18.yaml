@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: apr18
+  project: giri-apr
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: k8s-np1
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-qc-apr18
+  resourceQuotas: {}
