@@ -10,6 +10,13 @@ spec:
   costProfile:
     name: default-cost-profile-azure
     version: version-1715282716
+  customAddons:
+  - name: bitnami-redis
+    version: v1
+  - dependsOn:
+    - bitnami-redis
+    name: bitnami-nginx
+    version: v1
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -40,4 +47,4 @@ spec:
       name: default
       version: latest
   type: custom
-  version: v1
+  version: v2
