@@ -1,15 +1,15 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Blueprint
 metadata:
-  name: gb1
+  name: giri-custom-cost-blueprint
   project: giri-apr
 spec:
   base:
     name: default-aks
-    version: 2.6.0
-  customAddons:
-  - name: nginx-catalog
-    version: v12
+    version: 2.7.0
+  costProfile:
+    name: giri-aks
+    version: v1
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -23,5 +23,5 @@ spec:
     enabled: true
   driftWebhook:
     enabled: true
-  type: golden
-  version: v3
+  type: custom
+  version: v0

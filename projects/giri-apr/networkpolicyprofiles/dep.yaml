@@ -1,0 +1,6 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NetworkPolicyProfile
+metadata:
+  name: dep
+  project: giri-apr
+spec: {}

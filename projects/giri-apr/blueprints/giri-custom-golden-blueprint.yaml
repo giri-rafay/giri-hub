@@ -1,0 +1,34 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: giri-custom-golden-blueprint
+  project: giri-apr
+spec:
+  base:
+    name: default
+    version: 2.7.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      helmExporter:
+        enabled: true
+      kubeStateMetrics:
+        enabled: true
+      metricsServer:
+        enabled: true
+      nodeExporter:
+        enabled: true
+      prometheusAdapter:
+        enabled: true
+      resources:
+        limits:
+          cpu: 100m
+          memory: 200Mi
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  type: golden
+  version: v0
