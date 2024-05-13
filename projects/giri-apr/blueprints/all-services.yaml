@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: all-services
+  project: giri-apr
+spec:
+  driftWebhook:
+    enabled: true
+  type: custom
