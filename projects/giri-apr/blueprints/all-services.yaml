@@ -4,6 +4,40 @@ metadata:
   name: all-services
   project: giri-apr
 spec:
+  base:
+    name: default-aks
+    version: 2.7.0
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1715282716
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
   driftWebhook:
     enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: dep-cp1
+      version: v1
+    - name: cp1
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: policy-privileged
+      version: version-1715282716
+    profile:
+      name: default
+      version: latest
   type: custom
+  version: v1
