@@ -3,4 +3,8 @@ kind: ClusterNetworkPolicy
 metadata:
   name: dep-cp1
   project: giri-apr
-spec: {}
+spec:
+  rules:
+  - name: dep-cr
+    version: v1
+  version: v1
