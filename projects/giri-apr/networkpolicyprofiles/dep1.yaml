@@ -3,4 +3,7 @@ kind: NetworkPolicyProfile
 metadata:
   name: dep1
   project: giri-apr
-spec: {}
+spec:
+  installationParams:
+    policyEnforcementMode: default
+  version: v1
