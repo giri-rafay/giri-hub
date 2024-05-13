@@ -3,4 +3,11 @@ kind: ClusterNetworkPolicyRule
 metadata:
   name: dep-cr
   project: giri-apr
-spec: {}
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/dep-cr/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  version: v1
